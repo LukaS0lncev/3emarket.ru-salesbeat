@@ -291,7 +291,7 @@ class SalesBeat extends Module
 
 
 
-        public static function formatSalesBeatProductsDiscounts($cart)
+    public static function formatSalesBeatProductsDiscounts($cart)
     {
         $cart_products = $cart->getProducts();
         $count_cart_products = count($cart_products);
@@ -590,10 +590,10 @@ class SalesBeat extends Module
     public function hookDisplayAdminOrder($params)
     {
         $order = new Order($params['id_order']);
-        
+                
         if ($order->total_discounts) {
-             $GLOBALS['total_discounts_paimon'] = round($order->total_discounts);
-        }
+            $GLOBALS['total_discounts_paimon'] = round($order->total_discounts);
+       }
 
         if (Tools::isSubmit('sendOrder')) {
             $GLOBALS['COD'] = 0;

@@ -60,7 +60,7 @@ class CreateSBMethod extends BaseSBMethod
                 'delivery_price' =>  ceil(($GLOBALS['COD']==1) ? $delivery_info->delivery_price : 0),
                 'delivery_from_shop' => false
             ),
-           // 'products' => SalesBeat::formatSalesBeatProducts($cart),
+            // 'products' => SalesBeat::formatSalesBeatProducts($cart),
             'products' => $products_paimon,
             'recipient' => array(
                 'city_id' => $delivery_info->city_code,
